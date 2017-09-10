@@ -1,0 +1,23 @@
+Context
+A Context has for RenderScript the same meaning that it has for an
+Android Activity. RenderScript scripts initialized inside the same context
+will be able to access the same Allocations.
+
+Script
+RenderScript code is written into compilable files, which use a C99
+programming language variant (having extensions .rs, .fs).
+Allocation
+
+A RenderScript allocation is a class that interfaces with a memory
+allocation (the one you create using the C malloc function) where you can
+store your scripts’ data. An allocation is defined by a root element (which
+tells RS what kind of data you are storing inside the allocation) and the
+count of those elements.
+
+Kernel
+A RenderScript kernel is a function applied to every allocation’s element
+and does calculations over it.
+
+Type
+A RenderScript Type defines which kind of basic element an allocation has
+(e.g. int) and the dimensions of the allocation itself (like x, y and z).
